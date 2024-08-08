@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - IGNITECLICKS</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Flexbox for body to keep footer at the bottom */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        /* Additional styles for background and popup */
+        .service {
+            background: url('no.jpg') no-repeat center center/cover; /* Background image */
+            color: #ffffff; /* Text color */
+            padding: 60px 20px; /* Padding */
+            text-align: center; /* Center align text */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 80vh; /* Minimum height to push footer down */
+        }
+
+        /* Popup styles */
+        .popup {
+            display: none; /* Hidden by default */
+            position: fixed; /* Fixed position */
+            top: 0; left: 0; right: 0; bottom: 0; /* Fullscreen */
+            background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+        }
+
+        .popup img {
+            max-width: 90%; /* Responsive image size */
+            max-height: 80%; /* Responsive image size */
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        .popup.active {
+            display: flex; /* Show popup when active */
+        }
+
+        .popup-close {
+            position: absolute; /* Close button position */
+            top: 20px; right: 20px; /* Close button position */
+            background: #f39c12; /* Background color for close button */
+            color: #fff; /* Text color for close button */
+            border: none; /* Remove border */
+            border-radius: 50%; /* Rounded close button */
+            width: 30px; height: 30px; /* Size of close button */
+            text-align: center; /* Center text */
+            font-size: 18px; /* Font size */
+            cursor: pointer; /* Pointer cursor */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #f1f1f1;
+            color: #070707;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">IGNITECLICKS</div>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="review.html">Review</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="service" class="service">
+            <h2>Our Services</h2>
+            <ul>
+                <li><a href="#" class="service-item" data-image="WEDDING.jpg">Wedding Photography</a></li>
+                <li><a href="#" class="service-item" data-image="POTRATE.jpg">Portrait Photography</a></li>
+                <li><a href="#" class="service-item" data-image="Event.jpg">Event Photography</a></li>
+                <li><a href="#" class="service-item" data-image="product.jpg">Product Photography</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Popup container -->
+    <div class="popup" id="popup">
+        <button class="popup-close" id="popup-close">&times;</button>
+        <img id="popup-image" src="" alt="Service Image">
+    </div>
+
+    <footer>
+        <p>&copy; 2024 IGNITECLICKS. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for handling popup functionality
+        document.querySelectorAll('.service-item').forEach(item => {
+            item.addEventListener('click', function(event) {
+                event.preventDefault();
+                const imageUrl = this.getAttribute('data-image');
+                document.getElementById('popup-image').src = imageUrl;
+                document.getElementById('popup').classList.add('active');
+            });
+        });
+
+        document.getElementById('popup-close').addEventListener('click', function() {
+            document.getElementById('popup').classList.remove('active');
+        });
+
+        // Close popup when clicking outside of the image
+        document.getElementById('popup').addEventListener('click', function(event) {
+            if (event.target === this) {
+                this.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

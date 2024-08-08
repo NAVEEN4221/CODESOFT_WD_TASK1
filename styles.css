@@ -1,0 +1,158 @@
+/* General body styling */
+body {
+  margin: 0; /* Remove default margin */
+  font-family: Arial, sans-serif; /* Set default font */
+}
+
+/* Header styling */
+header {
+  background: #000; /* Black background for header */
+  padding: 20px; /* Padding around the header */
+}
+
+/* Navigation styling */
+nav {
+  display: flex; /* Flexbox layout for navigation */
+  justify-content: space-between; /* Space between logo and menu items */
+  align-items: center; /* Center items vertically */
+}
+
+/* Logo styling */
+.logo {
+  color: #fff; /* White text color */
+  font-size: 24px; /* Larger font size for logo */
+}
+
+/* Navigation menu styling */
+nav ul {
+  list-style: none; /* Remove default list styling */
+  display: flex; /* Flexbox layout for menu items */
+  gap: 15px; /* Space between menu items */
+}
+
+/* Navigation menu items styling */
+nav ul li {
+  margin: 0; /* Remove default margin */
+}
+
+/* Navigation menu links styling */
+nav ul li a {
+  color: #fff; /* White text color */
+  text-decoration: none; /* Remove underline from links */
+  font-size: 18px; /* Font size for menu items */
+}
+
+/* Section styling */
+section {
+  padding: 60px 20px; /* Padding inside each section */
+  text-align: center; /* Center align text */
+}
+
+/* Home section specific styling */
+.home {
+  background: url('DSLR.jpg') no-repeat center center/cover; /* Background image with cover effect */
+  color: #fff; /* White text color */
+  height: 100vh; /* Full viewport height */
+  display: flex; /* Flexbox layout for centering content */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  text-align: center; /* Center align text */
+}
+
+/* Content inside home section */
+.home .content {
+  max-width: 600px; /* Limit content width */
+}
+
+/* Main heading inside home section */
+.home h1 {
+  font-size: 48px; /* Large font size for main heading */
+  margin-bottom: 20px; /* Space below heading */
+}
+
+/* Span inside main heading for styling */
+.home h1 span {
+  color: #f39c12; /* Highlight color */
+}
+
+/* Paragraph inside home section */
+.home p {
+  font-size: 18px; /* Font size for paragraph */
+  margin-bottom: 30px; /* Space below paragraph */
+}
+
+/* Button styling */
+.btn {
+  background: #f39c12; /* Button background color */
+  color: #fff; /* Button text color */
+  padding: 10px 20px; /* Padding inside button */
+  text-decoration: none; /* Remove underline from button */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Styling for common sections */
+.about, .service, .project, .review, .team, .blog, .contact {
+  background: #f4f4f4; /* Light grey background for sections */
+  margin-top: -10px; /* Slight overlap with previous section */
+}
+
+/* Headings in common sections */
+.about h2, .service h2, .project h2, .review h2, .team h2, .blog h2, .contact h2 {
+  font-size: 36px; /* Font size for section headings */
+  margin-bottom: 20px; /* Space below headings */
+}
+
+/* Paragraphs in common sections */
+.about p, .service p, .project p, .review p, .team p, .blog p, .contact p {
+  font-size: 18px; /* Font size for paragraphs */
+  margin-bottom: 30px; /* Space below paragraphs */
+}
+
+/* Service list styling */
+.service ul {
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+}
+
+/* Service list items */
+.service ul li {
+  font-size: 18px; /* Font size for list items */
+  margin-bottom: 10px; /* Space below list items */
+}
+
+/* Contact form styling */
+form {
+  display: flex; /* Flexbox layout for form */
+  flex-direction: column; /* Stack form elements vertically */
+  align-items: center; /* Center form elements */
+}
+
+/* Labels in contact form */
+form label {
+  margin: 10px 0 5px; /* Space around labels */
+  font-size: 16px; /* Font size for labels */
+}
+
+/* Input and textarea styling in contact form */
+form input, form textarea {
+  width: 100%; /* Full width of parent */
+  max-width: 500px; /* Maximum width */
+  padding: 10px; /* Padding inside inputs */
+  margin-bottom: 20px; /* Space below inputs */
+  border: 1px solid #ccc; /* Border around inputs */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Button in contact form */
+form .btn {
+  width: auto; /* Auto width for button */
+  padding: 10px 30px; /* Padding inside button */
+}
+
+/* Footer styling */
+footer {
+  background: #000; /* Black background for footer */
+  color: #fff; /* White text color */
+  text-align: center; /* Center align text */
+  padding: 20px 0; /* Padding inside footer */
+}
